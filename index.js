@@ -65,7 +65,7 @@ async function run() {
       const books = await booksCollection.find().sort({ _id: -1 }).toArray();
       res.send(books);
     });
-
+//by id
     app.get("/books/:id",  async (req, res) => {
       const book = await booksCollection.findOne({ _id: new ObjectId(req.params.id) });
       res.send(book);
