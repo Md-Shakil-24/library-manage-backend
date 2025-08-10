@@ -81,7 +81,7 @@ async function run() {
       );
       res.send(result);
     });
-
+//delete
     app.delete("/books/:id", async (req, res) => {
       const result = await booksCollection.deleteOne({ _id: new ObjectId(req.params.id) });
       res.send(result);
