@@ -60,7 +60,7 @@ async function run() {
       const result = await booksCollection.insertOne(req.body);
       res.send(result);
     });
-
+//get books
     app.get("/books", async (req, res) => {
       const books = await booksCollection.find().sort({ _id: -1 }).toArray();
       res.send(books);
